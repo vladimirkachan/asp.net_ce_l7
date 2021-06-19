@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace _01_DependencyInjection.Services
 {
-    public interface IEmailValidator
+    public interface ITimer
     {
-        bool IsValidEmail(string email);
+        DateTime Now();
     }
 }
