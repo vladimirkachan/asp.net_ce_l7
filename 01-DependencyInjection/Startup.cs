@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using _01_DependencyInjection.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,6 +15,7 @@ namespace _01_DependencyInjection
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<ITimer, TimerService>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 

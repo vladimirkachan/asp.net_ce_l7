@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace _01_DependencyInjection.Services
 {
-    public class EmailValidatorService : IEmailValidator
+    public class TimerService : ITimer
     {
-        public bool IsValidEmail(string email)
+        public DateTime Now()
         {
-            return Regex.IsMatch(email, "\\w + ([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
+            return DateTime.Now;
         }
     }
 }
